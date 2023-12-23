@@ -1,0 +1,12 @@
+<!-- [/// NIRMITI CONTENT ///] -->
+<!-- This file loads the Lua library. It also contains some of the data used for examples of Nirmiti's features. -->
+
+<FTL>
+
+<mod:findLike type="scripts">
+
+    <mod-append:script>data/nirmiti.lua</mod-append:script>
+
+</mod:findLike>
+
+</FTL>
