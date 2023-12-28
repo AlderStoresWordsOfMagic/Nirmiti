@@ -8,6 +8,9 @@
 -- [/// CORE LOGIC ///] --
 -- [The heart and soul of Nirmiti.] --
 
+if not mods then mods = {} end
+if not mods.nirmiti then -- Only implement the core if the namespace isn't defined yet.
+
 -- [Namespace definition.] --
 
 mods.nirmiti = {}
@@ -23,8 +26,6 @@ end
 
 -- [FUNCTION - Iterator function used to loop through tables, as HS Lua lacks one.] --
 
-local vter = mods.nirmiti.vter
-
 function mods.nirmiti.vter(cvec)
     local i = -1
     local n = cvec:size()
@@ -35,8 +36,6 @@ function mods.nirmiti.vter(cvec)
 end
 
 -- [FUNCTION - It keeps things from exploding. It creates an empty table for some things, but... I dunno what things lack and need a table.]
-
-local userdata_table = mods.nirmiti.userdata_table
 
 function mods.nirmiti.userdata_table(userdata, tableName)
     if not userdata.table[tableName] then
@@ -104,5 +103,72 @@ function mods.nirmiti.table_copy_deep(value, cache, promises, copies)
     return copy
 end
 
--- [/// CUSTOM XML PARSERS ///] --
--- [The missing link.] --
+-- [/// PARSER LOGIC ///] --
+-- [Used to help parse XML.] --
+
+-- [FUNCTION - Convert string boolean to LUA boolean. Same XML boolean conversion as used in HS.] --
+
+function mods.nirmiti.parse_xml_bool(s)
+    return s == "true" or s == "True" or s == "TRUE"
+end
+
+-- [FUNCTION - Iterator function used to loop through a node's children.] --
+
+do
+    local function node_iter(parent, child)
+        if child == "Start" then return parent:first_node() end
+        return child:next_sibling()
+    end
+
+    mods.nirmiti.node_children = function(parent)
+        if not parent then error("Invalid node to node_children iterator!", 2) end
+        return node_iter, parent, "Start"
+    end
+end
+
+-- [FUNCTION - Get the value of a node and throw an error if it doesn't exist.] --
+
+function mods.nirmiti.node_get_value(node, errorMsg)
+    if not node then error(errorMsg, 2) end
+    local ret = node:value()
+    if not ret then error(errorMsg, 2) end
+    return ret
+end
+
+-- [FUNCTION - Get the value of a node and return a default value if it doesn't exist.] --
+
+function mods.nirmiti.node_get_value_default(node, default)
+    if not node then return default end
+    local ret = node:value()
+    if not ret then return default end
+    return ret
+end
+
+-- [FUNCTION - Get the number value of a node and throw an error if it doesn't exist or isn't a valid number.] --
+
+function mods.nirmiti.node_get_number(node, errorMsg)
+    if not node then error(errorMsg, 2) end
+    local ret = tonumber(node:value())
+    if not ret then error(errorMsg, 2) end
+    return ret
+end
+
+-- [FUNCTION - Get the number value of a node and return a default value if it doesn't exist or isn't a valid number.] --
+
+function mods.nirmiti.node_get_number_default(node, default)
+    if not node then return default end
+    local ret = tonumber(node:value())
+    if not ret then return default end
+    return ret
+end
+
+-- [FUNCTION - Get the boolean value of a node and return a default value if it doesn't exist or isn't a valid boolean.] --
+
+function mods.nirmiti.node_get_bool_default(node, default)
+    if not node then return default end
+    local ret = node:value()
+    if not ret then return default end
+    return mods.nirmiti.parse_xml_bool(ret)
+end
+
+end
