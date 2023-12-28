@@ -171,4 +171,21 @@ function mods.nirmiti.node_get_bool_default(node, default)
     return mods.nirmiti.parse_xml_bool(ret)
 end
 
+-- [FUNCTION - Retrive the parsed tag data for a given blueprint.] --
+
+mods.nirmiti.tagsBlueprintsParsed = {}
+function mods.nirmiti.bp_tag_data(bpName, tagName)
+    return mods.nirmiti.tagsBlueprintsParsed[bpName.."-"..tagName]
+end
+
+-- [FUNCTION - Add a tag to the blueprint tag table.] --
+
+mods.nirmiti.tagsBlueprintsParsers = {}
+function mods.nirmiti.bp_tag_add(parentName, tagName, parser)
+    if not mods.nirmiti.tagsBlueprintsParsers[parentName] then
+        mods.nirmiti.tagsBlueprintsParsers[parentName] = {}
+    end
+    mods.nirmiti.tagsBlueprintsParsers[parentName][tagName] = parser
+end
+
 end

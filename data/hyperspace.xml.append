@@ -5,9 +5,14 @@
 
 <version>^1.8.0</version>
 
-<mod:findLike type="scripts">
+<mod:findLike type="scripts" limit="1">
 
+    <!-- Backbone scripts. -->
     <mod-append:script>data/nirmiti_module/core.lua</mod-append:script>
+    <mod-append:script>data/nirmiti_module/parser.lua</mod-append:script>
+
+    <!-- Tag scripts. -->
+    <mod-append:script>data/nirmiti_module/weapons/stat_chargers.lua</mod-append:script>
 
 </mod:findLike>
 
