@@ -7,7 +7,7 @@
 
 <mod:findLike type="scripts">
 
-    <mod-append:script>data/nirmiti_lua/nirmiti_core.lua</mod-append:script>
+    <mod-append:script>data/lua/core/nirmiti_core.lua</mod-append:script>
 
 </mod:findLike>
 
