@@ -1,6 +1,3 @@
--- [/// CREW LOGIC ///] --
--- [Work smarter, not harder.] --
-
 -- [Complex Behaviors - Gives crew AI unique behaviors when not controlled by the player. Actually written mostly by me!]
 
 mods.nirmiti.complexCrew = {}

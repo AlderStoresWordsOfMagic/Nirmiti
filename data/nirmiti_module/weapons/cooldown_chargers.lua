@@ -1,0 +1,1 @@
+-- [Cooldown Chargers - Reduce the cooldown of a weapon instead of shot count.] --

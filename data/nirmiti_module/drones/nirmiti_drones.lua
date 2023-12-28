@@ -1,6 +1,3 @@
--- [/// DRONE LOGIC ///] --
--- [Let loose the swarm.] --
-
 -- [Missile Drones - Balancing methods for drones that fire missiles.] --
 
 mods.nirmiti.missileDrones = {}

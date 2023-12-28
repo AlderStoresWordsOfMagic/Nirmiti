@@ -1,0 +1,1 @@
+-- [Brute-Force Attack - Make weapons capable of inflicting a Hacking effect.] --

@@ -1,0 +1,1 @@
+-- [Area Weapons - Weapons that inflict damage to all adjacent rooms.] --

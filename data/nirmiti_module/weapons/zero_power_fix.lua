@@ -1,0 +1,1 @@
+-- [Conservative Fix - Fixes the attack storage glitch with weapons that cost no power.] --

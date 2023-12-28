@@ -1,6 +1,3 @@
--- [/// AUGMENT LOGIC ///] --
--- [Strength from within.] --
-
 -- [Regenerating Shield - An energy shield that regenerates some time after taking damage.]
 
 mods.nirmiti.regenShields = {}

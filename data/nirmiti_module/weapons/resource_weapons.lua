@@ -1,4 +1,4 @@
--- [Resource Weapons - Make weapons cost resources other than missiles to fire.]
+-- [Resource Weapons - Make weapons cost resources other than missiles to fire.] --
 
 mods.nirmiti.resourceWeapons = {}
 local resourceWeapons = mods.nirmiti.resourceWeapons

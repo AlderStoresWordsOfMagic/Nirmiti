@@ -1,2 +1,1 @@
--- [/// GRAPHICAL LOGIC ///] --
--- [There is beauty in chaos.] --
+-- [Particle Effects - Create particle effects on weapon fire or impact.] --
