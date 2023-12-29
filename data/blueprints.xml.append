@@ -1,0 +1,43 @@
+<!-- [/// DEBUG ITEMS ///] -->
+
+<FTL>
+    <weaponBlueprint name="NIRMITI_SHIELD_POPPER"> <!--.11 DPS-->
+        <type>LASER</type>
+        <title>Pop Laser</title>
+        <short>Pop Laser</short>
+        <tip>tip_laser</tip>
+        <desc>A strange laser that can directly pop and overload shields, despite dealing no hull damage.</desc>
+        <tooltip>Defense laser; 1 damage, 1 shot. 9 second cooldown.</tooltip>
+        <sysDamage>1</sysDamage>
+        <shots>1</shots>
+        <sp>0</sp>
+        <fireChance>1</fireChance>
+        <breachChance>0</breachChance>
+        <cooldown>9</cooldown>
+        <power>1</power>
+        <cost>40</cost>
+        <bp>2</bp>
+        <rarity>0</rarity>
+        <image>laser_burst</image>
+        <nirmiti-shieldPopper type="pop" count="1" countSuper="1" crush="10"/>
+        <launchSounds>
+            <sound>lightLaser1</sound>
+            <sound>lightLaser2</sound>
+            <sound>lightLaser3</sound>
+        </launchSounds>
+        <hitShipSounds>
+            <sound>hitHull2</sound>
+            <sound>hitHull3</sound>
+        </hitShipSounds>
+        <hitShieldSounds>
+            <sound>hitShield1</sound>
+            <sound>hitShield2</sound>
+            <sound>hitShield3</sound>
+        </hitShieldSounds>
+        <missSounds>
+            <sound>miss</sound>
+        </missSounds>
+        <weaponArt>laser_burst_1</weaponArt>
+        <iconImage>laser</iconImage>
+    </weaponBlueprint>
+</FTL>
