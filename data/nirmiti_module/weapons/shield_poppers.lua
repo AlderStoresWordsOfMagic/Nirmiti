@@ -23,6 +23,7 @@ local function parser(node, bpName)
         count = node_get_number_default(node:first_attribute("count"), 0),
         countSuper = node_get_number_default(node:first_attribute("countSuper"), 0),
         crush = node_get_number_default(node:first_attribute("crush"), 0)
+        sound = node_get_value_default(node:first_attribute("sound"), "")
     }
     return popData
 end
@@ -44,7 +45,7 @@ script.on_internal_event(Defines.InternalEvents.SHIELD_COLLISION, function(shipM
                 shieldPower.first = math.max(0, shieldPower.first - popData.count)
                 if shieldPower.first == 0 then
                     shieldPower.first = shieldPower.first - popData.crush
-                    Hyperspace.Global.GetInstance():GetSoundControl():PlaySoundMix("nirmiti_shield_crush", 1, true) -- [TODO: make sound changeable]
+                    Hyperspace.Global.GetInstance():GetSoundControl():PlaySoundMix(popData.sound, 1, true)
                 end
             end
         end
@@ -59,7 +60,7 @@ script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA_HIT, function(shipMa
         shieldSystem.shields.power.first = math.max(0, shieldSystem.shields.power.first - popData.count) 
         if shieldSystem.shields.power.first == 0 then
             shieldSystem.shields.power.first = shieldSystem.shields.power.first - popData.crush
-            Hyperspace.Global.GetInstance():GetSoundControl():PlaySoundMix("nirmiti_shield_crush", 1, true) -- [TODO: make sound changeable]
+            Hyperspace.Global.GetInstance():GetSoundControl():PlaySoundMix(popData.sound, 1, true)
         end
     end
     return Defines.Chain.CONTINUE

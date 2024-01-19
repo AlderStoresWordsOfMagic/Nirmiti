@@ -13,13 +13,13 @@
         <sp>0</sp>
         <fireChance>1</fireChance>
         <breachChance>0</breachChance>
-        <cooldown>9</cooldown>
+        <cooldown>8</cooldown>
         <power>1</power>
         <cost>40</cost>
         <bp>2</bp>
         <rarity>0</rarity>
         <image>laser_burst</image>
-        <nirmiti-shieldPopper type="pop" count="1" countSuper="1" crush="10"/>
+        <nirmiti-shieldPopper type="pop" count="1" countSuper="1" crush="10" sound="nirmiti_shield_popper"/>
         <launchSounds>
             <sound>lightLaser1</sound>
             <sound>lightLaser2</sound>
@@ -37,7 +37,7 @@
         <missSounds>
             <sound>miss</sound>
         </missSounds>
-        <weaponArt>laser_burst_1</weaponArt>
+        <weaponArt>nirmiti_gun</weaponArt>
         <iconImage>laser</iconImage>
     </weaponBlueprint>
 </FTL>

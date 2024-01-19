@@ -1,0 +1,43 @@
+<FTL>
+
+<animSheet name="nirmiti_gun" w="319" h="61" fw="29" fh="61">weapons/debug_gun.png</animSheet>
+<weaponAnim name="nirmiti_gun">
+    <sheet>nirmiti_gun</sheet>
+    <desc length="11" x="0" y="0"/>
+    <chargedFrame>1</chargedFrame>
+    <fireFrame>6</fireFrame>
+    <firePoint x="17" y="13"/>
+    <mountPoint x="4" y="43"/>
+    <chargeImage>weapons/debug_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="nirmiti_beam" w="232" h="61" fw="29" fh="61">weapons/debug_beam.png</animSheet>
+<weaponAnim name="nirmiti_beam">
+    <sheet>nirmiti_beam</sheet>
+    <desc length="8" x="0" y="0"/>
+    <chargedFrame>1</chargedFrame>
+    <fireFrame>2</fireFrame>
+    <firePoint x="17" y="13"/>
+    <mountPoint x="4" y="43"/>
+    <chargeImage>weapons/debug_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="nirmiti_bomblauncher" w="261" h="61" fw="29" fh="61">weapons/debug_bomb.png</animSheet>
+<weaponAnim name="nirmiti_bomblauncher">
+    <sheet>nirmiti_bomblauncher</sheet>
+    <desc length="9" x="0" y="0"/>
+    <chargedFrame>1</chargedFrame>
+    <fireFrame>2</fireFrame>
+    <firePoint x="17" y="13"/>
+    <mountPoint x="4" y="43"/>
+    <chargeImage>weapons/debug_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="nirmiti_projectile" w="60" h="20" fw="60" fh="20">weapons/debug_projectile.png</animSheet>
+<anim name="nirmiti_projectile">
+    <sheet>nirmiti_projectile</sheet>
+    <desc length="1" x="0" y="0"/>
+    <time>0.3</time>
+</anim>
+
+</FTL>
