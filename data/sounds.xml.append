@@ -2,6 +2,6 @@
 
 <!-- /// WEAPONS /// -->
 
-<nirmiti_shield_crush volume="4">weapons/misc/shield_crush.ogg</nirmiti_shield_crush>
+<nirmiti_shield_crush volume="4">effects/nirmiti_shield_crush.ogg</nirmiti_shield_crush>
 
 </FTL>

@@ -22,7 +22,7 @@
     <chargeImage>weapons/debug_glow.png</chargeImage>
 </weaponAnim>
 
-<animSheet name="nirmiti_bomblauncher" w="261" h="61" fw="29" fh="61">weapons/debug_bomb.png</animSheet>
+<animSheet name="nirmiti_bomblauncher" w="261" h="61" fw="29" fh="61">weapons/debug_bomblauncher.png</animSheet>
 <weaponAnim name="nirmiti_bomblauncher">
     <sheet>nirmiti_bomblauncher</sheet>
     <desc length="9" x="0" y="0"/>
@@ -38,6 +38,13 @@
     <sheet>nirmiti_projectile</sheet>
     <desc length="1" x="0" y="0"/>
     <time>0.3</time>
+</anim>
+
+<animSheet name="nirmiti_bomb" w="525" h="35" fw="35" fh="35">weapons/debug_bomb.png</animSheet>
+<anim name="nirmiti_bomb">
+	<sheet>nirmiti_bomb</sheet>
+	<desc length="15" x="0" y="0"/>
+	<time>1.0</time>
 </anim>
 
 </FTL>

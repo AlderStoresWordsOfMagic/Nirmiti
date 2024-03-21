@@ -1,10 +1,15 @@
 <!-- [/// DEBUG ITEMS ///] -->
 
 <FTL>
-    <weaponBlueprint name="NIRMITI_SHIELD_POPPER"> <!--.11 DPS-->
+
+<!-- [/// WEAPONS ///]-->
+
+    <!-- [/// SHIELD POPPERS ///] -->
+
+    <weaponBlueprint name="NIRMITI_SHIELD_POPPER_POP"> <!--.11 DPS-->
         <type>LASER</type>
-        <title>Pop Laser</title>
-        <short>Pop Laser</short>
+        <title>Pop Laser [Pop Mode]</title>
+        <short>Pop Laser [Pop]</short>
         <tip>tip_laser</tip>
         <desc>A strange laser that can directly pop and overload shields, despite dealing no hull damage.</desc>
         <tooltip>Defense laser; 1 damage, 1 shot. 9 second cooldown.</tooltip>
@@ -18,7 +23,7 @@
         <cost>40</cost>
         <bp>2</bp>
         <rarity>0</rarity>
-        <image>laser_burst</image>
+        <image>nirmiti_projectile</image>
         <nirmiti-shieldPopper type="pop" count="1" countSuper="1" crush="10" sound="nirmiti_shield_popper"/>
         <launchSounds>
             <sound>lightLaser1</sound>
@@ -40,4 +45,218 @@
         <weaponArt>nirmiti_gun</weaponArt>
         <iconImage>laser</iconImage>
     </weaponBlueprint>
+
+    <weaponBlueprint name="NIRMITI_SHIELD_POPPER_PIERCE"> <!--.11 DPS-->
+        <type>LASER</type>
+        <title>Pop Laser [Pierce Mode]</title>
+        <short>Pop Laser [Pierce]</short>
+        <tip>tip_laser</tip>
+        <desc>A strange laser that can directly pop and overload shields, despite dealing no hull damage.</desc>
+        <tooltip>Defense laser; 1 damage, 1 shot. 9 second cooldown.</tooltip>
+        <sysDamage>1</sysDamage>
+        <shots>1</shots>
+        <sp>10</sp>
+        <fireChance>1</fireChance>
+        <breachChance>0</breachChance>
+        <cooldown>8</cooldown>
+        <power>1</power>
+        <cost>40</cost>
+        <bp>2</bp>
+        <rarity>0</rarity>
+        <image>nirmiti_projectile</image>
+        <nirmiti-shieldPopper type="pierce" count="1" countSuper="1" crush="10" sound="nirmiti_shield_crush"/>
+        <launchSounds>
+            <sound>lightLaser1</sound>
+            <sound>lightLaser2</sound>
+            <sound>lightLaser3</sound>
+        </launchSounds>
+        <hitShipSounds>
+            <sound>hitHull2</sound>
+            <sound>hitHull3</sound>
+        </hitShipSounds>
+        <hitShieldSounds>
+            <sound>hitShield1</sound>
+            <sound>hitShield2</sound>
+            <sound>hitShield3</sound>
+        </hitShieldSounds>
+        <missSounds>
+            <sound>miss</sound>
+        </missSounds>
+        <weaponArt>nirmiti_gun</weaponArt>
+        <iconImage>laser</iconImage>
+    </weaponBlueprint>
+
+    <!-- [/// RESOURCE WEAPONS ///] -->
+
+    <weaponBlueprint name="NIRMITI_RESOURCE_SCRAP"> <!--.11 DPS-->
+        <type>LASER</type>
+        <title>Scrap Laser</title>
+        <short>Scrap Laser</short>
+        <tip>tip_laser</tip>
+        <desc>A strange laser that consumes 5 scrap every time it fires.</desc>
+        <tooltip>Defense laser; 1 damage, 1 shot. 9 second cooldown.</tooltip>
+        <damage>1</damage>
+        <shots>1</shots>
+        <sp>0</sp>
+        <fireChance>1</fireChance>
+        <breachChance>0</breachChance>
+        <cooldown>8</cooldown>
+        <power>1</power>
+        <cost>40</cost>
+        <bp>2</bp>
+        <rarity>0</rarity>
+        <image>nirmiti_projectile</image>
+        <nirmiti-resourceCost type="scrap" count="5"/>
+        <launchSounds>
+            <sound>lightLaser1</sound>
+            <sound>lightLaser2</sound>
+            <sound>lightLaser3</sound>
+        </launchSounds>
+        <hitShipSounds>
+            <sound>hitHull2</sound>
+            <sound>hitHull3</sound>
+        </hitShipSounds>
+        <hitShieldSounds>
+            <sound>hitShield1</sound>
+            <sound>hitShield2</sound>
+            <sound>hitShield3</sound>
+        </hitShieldSounds>
+        <missSounds>
+            <sound>miss</sound>
+        </missSounds>
+        <weaponArt>nirmiti_gun</weaponArt>
+        <iconImage>laser</iconImage>
+    </weaponBlueprint>
+
+    <weaponBlueprint name="NIRMITI_RESOURCE_FUEL"> <!--.11 DPS-->
+        <type>LASER</type>
+        <title>Fuel Laser</title>
+        <short>Fuel Laser</short>
+        <tip>tip_laser</tip>
+        <desc>A strange laser that consumes 1 fuel every time it fires.</desc>
+        <tooltip>Defense laser; 1 damage, 1 shot. 9 second cooldown.</tooltip>
+        <damage>1</damage>
+        <shots>1</shots>
+        <sp>0</sp>
+        <fireChance>1</fireChance>
+        <breachChance>0</breachChance>
+        <cooldown>8</cooldown>
+        <power>1</power>
+        <cost>40</cost>
+        <bp>2</bp>
+        <rarity>0</rarity>
+        <image>nirmiti_projectile</image>
+        <nirmiti-resourceCost type="fuel" count="1"/>
+        <launchSounds>
+            <sound>lightLaser1</sound>
+            <sound>lightLaser2</sound>
+            <sound>lightLaser3</sound>
+        </launchSounds>
+        <hitShipSounds>
+            <sound>hitHull2</sound>
+            <sound>hitHull3</sound>
+        </hitShipSounds>
+        <hitShieldSounds>
+            <sound>hitShield1</sound>
+            <sound>hitShield2</sound>
+            <sound>hitShield3</sound>
+        </hitShieldSounds>
+        <missSounds>
+            <sound>miss</sound>
+        </missSounds>
+        <weaponArt>nirmiti_gun</weaponArt>
+        <iconImage>laser</iconImage>
+    </weaponBlueprint>
+
+    <weaponBlueprint name="NIRMITI_RESOURCE_MISSILES"> <!--.11 DPS-->
+        <type>LASER</type>
+        <title>Missile Laser</title>
+        <short>Missile Laser</short>
+        <tip>tip_laser</tip>
+        <desc>A strange laser that consumes 1 missile every time it fires.</desc>
+        <tooltip>Defense laser; 1 damage, 1 shot. 9 second cooldown.</tooltip>
+        <damage>1</damage>
+        <shots>1</shots>
+        <sp>0</sp>
+        <fireChance>1</fireChance>
+        <breachChance>0</breachChance>
+        <cooldown>8</cooldown>
+        <power>1</power>
+        <cost>40</cost>
+        <bp>2</bp>
+        <rarity>0</rarity>
+        <image>nirmiti_projectile</image>
+        <nirmiti-resourceCost type="missiles" count="1"/>
+        <launchSounds>
+            <sound>lightLaser1</sound>
+            <sound>lightLaser2</sound>
+            <sound>lightLaser3</sound>
+        </launchSounds>
+        <hitShipSounds>
+            <sound>hitHull2</sound>
+            <sound>hitHull3</sound>
+        </hitShipSounds>
+        <hitShieldSounds>
+            <sound>hitShield1</sound>
+            <sound>hitShield2</sound>
+            <sound>hitShield3</sound>
+        </hitShieldSounds>
+        <missSounds>
+            <sound>miss</sound>
+        </missSounds>
+        <weaponArt>nirmiti_gun</weaponArt>
+        <iconImage>laser</iconImage>
+    </weaponBlueprint>
+
+    <weaponBlueprint name="NIRMITI_RESOURCE_DRONES"> <!--.11 DPS-->
+        <type>LASER</type>
+        <title>Drone Laser</title>
+        <short>Drone Laser</short>
+        <tip>tip_laser</tip>
+        <desc>A strange laser that consumes 1 drone every time it fires.</desc>
+        <tooltip>Defense laser; 1 damage, 1 shot. 9 second cooldown.</tooltip>
+        <damage>1</damage>
+        <shots>1</shots>
+        <sp>0</sp>
+        <fireChance>1</fireChance>
+        <breachChance>0</breachChance>
+        <cooldown>8</cooldown>
+        <power>1</power>
+        <cost>40</cost>
+        <bp>2</bp>
+        <rarity>0</rarity>
+        <image>nirmiti_projectile</image>
+        <nirmiti-resourceCost type="drones" count="1"/>
+        <launchSounds>
+            <sound>lightLaser1</sound>
+            <sound>lightLaser2</sound>
+            <sound>lightLaser3</sound>
+        </launchSounds>
+        <hitShipSounds>
+            <sound>hitHull2</sound>
+            <sound>hitHull3</sound>
+        </hitShipSounds>
+        <hitShieldSounds>
+            <sound>hitShield1</sound>
+            <sound>hitShield2</sound>
+            <sound>hitShield3</sound>
+        </hitShieldSounds>
+        <missSounds>
+            <sound>miss</sound>
+        </missSounds>
+        <weaponArt>nirmiti_gun</weaponArt>
+        <iconImage>laser</iconImage>
+    </weaponBlueprint>
+
+<!-- [/// AUGMENTS ///]-->
+
+<augBlueprint name="NIRMITI_INVINCIBLE">
+	<title>Invincibility</title>
+	<desc>You are immune to all damage of all kinds, in addition to all hazards and all sabotage.</desc>
+	<cost>1</cost>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<stackable>true</stackable>
+</augBlueprint>
+
 </FTL>

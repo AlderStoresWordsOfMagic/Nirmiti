@@ -22,7 +22,7 @@ local function parser(node, bpName)
         type = node_get_value_default(node:first_attribute("type"), "pop"),
         count = node_get_number_default(node:first_attribute("count"), 0),
         countSuper = node_get_number_default(node:first_attribute("countSuper"), 0),
-        crush = node_get_number_default(node:first_attribute("crush"), 0)
+        crush = node_get_number_default(node:first_attribute("crush"), 0),
         sound = node_get_value_default(node:first_attribute("sound"), "")
     }
     return popData

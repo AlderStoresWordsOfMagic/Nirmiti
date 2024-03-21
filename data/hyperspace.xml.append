@@ -1,9 +1,11 @@
 <!-- [/// NIRMITI CONTENT ///] -->
-<!-- This file loads the Lua library. It also contains some of the data used for examples of Nirmiti's features. -->
+<!-- This file loads the Lua library. It also contains some of the data used for debug features and demonstrations. -->
 
 <FTL>
 
 <version>^1.8.0</version>
+
+<!-- [/// SCRIPTS ///]-->
 
 <mod:findLike type="scripts" limit="1">
 
@@ -12,9 +14,36 @@
     <mod-append:script>data/nirmiti_module/parser.lua</mod-append:script>
 
     <!-- Tag scripts. -->
+    <mod-append:script>data/nirmiti_module/weapons/resource_weapons.lua</mod-append:script>
     <mod-append:script>data/nirmiti_module/weapons/stat_chargers.lua</mod-append:script>
     <mod-append:script>data/nirmiti_module/weapons/shield_poppers.lua</mod-append:script>
 
 </mod:findLike>
+
+<!-- [/// AUGMENTS ///] -->
+
+<aug name="NIRMITI_INVINCIBLE">
+    <function name="SYSTEM_CASING" value="1" useForReqs="true" warning="false"/>
+    <function name="ROCK_ARMOR" value="1" useForReqs="true" warning="false"/>
+    <function name="ION_ARMOR" value="1" useForReqs="true" warning="false"/>
+    <function name="SLUG_GEL" value="999" useForReqs="true" warning="false"/>
+    <function name="FIRE_EXTINGUISHERS" value="999" useForReqs="true" warning="false"/>
+    <statBoosts>
+        <statBoost name="allDamageTakenMultiplier">
+                <boostType>SET</boostType>
+                <amount>0</amount>
+                <shipTarget>CURRENT_SHIP</shipTarget>
+                <crewTarget>ORIGINAL_ALLIES</crewTarget>
+                <priority>999999</priority>
+            </statBoost>
+            <statBoost name="sabotageSpeedMultiplier">
+                    <boostType>SET</boostType>
+                    <amount>0</amount>
+                    <shipTarget>CURRENT_SHIP</shipTarget>
+                    <crewTarget>ALL</crewTarget>
+                    <priority>999999</priority>
+                </statBoost>
+    </statBoosts>
+</aug>
 
 </FTL>
